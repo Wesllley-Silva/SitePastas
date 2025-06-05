@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Variáveis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Módulo 2 - Listas e Tuplas</h1>
+  </header>
+
+  <main>
+    <h2>O que aprendi</h2>
+
+    <p><strong>O que são Variáveis?</strong><br>
+    Variáveis são nomes que armazenam valores na memória do computador. Elas servem para guardar dados que podem ser usados e manipulados ao longo do programa. Pense em uma variável como uma caixa com uma etiqueta (o nome) que guarda um determinado conteúdo (o valor).</p>
+
+    <pre>nome = "Lucas"  # nome é a variável; "Lucas" é o valor armazenado</pre>
+
+    <ul>
+      <li><strong>1. Ordem de Execução dos Programas</strong></li>
+      <p>Python executa os comandos linha por linha, de cima para baixo, de forma sequencial. Portanto, uma variável precisa ser declarada antes de ser usada, ou o programa gerará um erro.</p>
+
+      <li><strong>2. Tipos de Variáveis</strong></li>
+      <p>Python reconhece automaticamente o tipo de dado atribuído a uma variável. Veja os tipos mais comuns:</p>
+
+      <table border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Nome</th>
+            <th>Exemplos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>int</code></td>
+            <td>Inteiros</td>
+            <td>10, -3, 1000</td>
+          </tr>
+          <tr>
+            <td><code>float</code></td>
+            <td>Decimais</td>
+            <td>3.14, -0.5, 100.0</td>
+          </tr>
+          <tr>
+            <td><code>str</code></td>
+            <td>Texto (string)</td>
+            <td>"Olá", 'Python'</td>
+          </tr>
+          <tr>
+            <td><code>bool</code></td>
+            <td>Lógicos</td>
+            <td>True, False</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre>
+idade = 20        # int
+preco = 19.90     # float
+nome = "Ana"      # str
+ativo = True      # bool
+      </pre>
+
+      <li><strong>3. Misturando Tipos de Variáveis</strong></li>
+      <p>Você pode usar diferentes tipos de variáveis juntos, mas precisa cuidar da compatibilidade:</p>
+
+      <pre>
+# print("Idade: " + 25)  # Erro!
+print("Idade: " + str(25))  # Correto
+      </pre>
+
+      <p>Principais funções de conversão:</p>
+      <table border="1" cellpadding="5">
+        <thead>
+          <tr>
+            <th>Função</th>
+            <th>Converte para</th>
+            <th>Exemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>int()</code></td>
+            <td>Inteiro</td>
+            <td><code>int("10") → 10</code></td>
+          </tr>
+          <tr>
+            <td><code>float()</code></td>
+            <td>Decimal</td>
+            <td><code>float("3.5") → 3.5</code></td>
+          </tr>
+          <tr>
+            <td><code>str()</code></td>
+            <td>Texto</td>
+            <td><code>str(25) → "25"</code></td>
+          </tr>
+          <tr>
+            <td><code>bool()</code></td>
+            <td>Booleano</td>
+            <td><code>bool(0) → False<br>bool("abc") → True</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <li><strong>4. Comando format</strong></li>
+      <p>O método <code>.format()</code> é usado para inserir variáveis dentro de strings:</p>
+
+      <pre>
+nome = "Carlos"
+idade = 30
+
+print("Nome: {}, Idade: {}".format(nome, idade))
+print("Nome: {0}, Idade: {1}".format(nome, idade))
+print("Nome: {n}, Idade: {i}".format(n=nome, i=idade))
+      </pre>
+
+      <li><strong>5. F-strings e Mudança de Tipos de Variáveis</strong></li>
+      <p>F-strings são uma forma moderna e prática de formatar texto no Python:</p>
+
+      <pre>
+nome = "Maria"
+idade = 25
+
+print(f"Nome: {nome}, Idade: {idade}")
+print(f"Idade no próximo ano: {idade + 1}")
+      </pre>
+
+      <li><strong>6. Lista de Exercícios - Estruturas Sequenciais</strong></li>
+      <p>Exercícios típicos para treinar variáveis envolvem:</p>
+      <ul>
+        <li>Ler dados com <code>input()</code></li>
+        <li>Converter tipos (<code>int()</code>, <code>float()</code>)</li>
+        <li>Realizar cálculos</li>
+        <li>Mostrar resultados com <code>print()</code>, <code>format()</code> ou <code>f-strings</code></li>
+      </ul>
+
+      <p><strong>Exemplo de exercício:</strong></p>
+      <pre>
+nome = input("Digite seu nome: ")
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+media = (nota1 + nota2) / 2
+print(f"{nome}, sua média é {media:.2f}")
+      </pre>
+    </ul>
+
+    <h2>Exemplo de código</h2>
+    <pre>
+# Cálculo simples de salário com desconto
+salario_bruto = float(input("Digite seu salário bruto: "))
+desconto = salario_bruto * 0.1
+salario_liquido = salario_bruto - desconto
+
+print(f"Desconto: R${desconto:.2f}")
+print(f"Salário líquido: R${salario_liquido:.2f}")
+    </pre>
+  </main>
+
+  <footer>
+    <p><a href="index.html">⬅ Voltar para o menu</a></p>
+  </footer>
+</body>
+</html>

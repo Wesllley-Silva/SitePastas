@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Strings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Módulo 2 - Strings em Python</h1>
+  </header>
+
+  <main>
+    <h2>O que aprendi</h2>
+
+✅ <strong>O que são Strings?</strong><br>
+Strings são **sequências de caracteres** usadas para representar textos em Python. Tudo que estiver entre aspas simples `'texto'`, aspas duplas `"texto"`, ou aspas triplas será considerado uma string.
+
+---
+
+<ul>
+  <li>1. Criando Strings</li>
+  <p>Você pode criar uma string com:</p>
+  <pre>
+mensagem = "Olá, mundo!"
+nome = 'Python'
+texto_longo = '''Este é um
+texto com múltiplas
+linhas.'''
+  </pre>
+
+  <li>2. Índices e Fatiamento (Slicing)</li>
+  <p>Cada caractere de uma string tem uma posição (índice), começando do zero.</p>
+  <pre>
+palavra = "Programar"
+print(palavra[0])    # P
+print(palavra[4])    # a
+print(palavra[-1])   # r (último caractere)
+  </pre>
+
+  <p>Você também pode pegar pedaços da string com <strong>fatiamento (slicing)</strong>:</p>
+  <pre>
+print(palavra[0:5])  # Progr → do índice 0 até o 4
+print(palavra[:4])   # Prog → do início até o 3
+print(palavra[4:])   # amar → do 4 até o final
+print(palavra[::2])  # Pormr → de 2 em 2
+print(palavra[::-1]) # ramargorP → string invertida
+  </pre>
+
+  <li>3. Métodos e Funções de String</li>
+  <p>Strings têm diversos métodos úteis. Eles servem para modificar, analisar ou transformar textos:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Exemplo de Código</th>
+        <th>Resultado/Explicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.upper()</code></td>
+        <td><code>texto.upper()</code></td>
+        <td><code>" OLÁ, MUNDO PYTHON! "</code> (converte para maiúsculas)</td>
+      </tr>
+      <tr>
+        <td><code>.lower()</code></td>
+        <td><code>texto.lower()</code></td>
+        <td><code>" olá, mundo python! "</code> (converte para minúsculas)</td>
+      </tr>
+      <tr>
+        <td><code>.strip()</code></td>
+        <td><code>texto.strip()</code></td>
+        <td><code>"Olá, Mundo Python!"</code> (remove espaços do início e fim)</td>
+      </tr>
+      <tr>
+        <td><code>.replace()</code></td>
+        <td><code>texto.replace("Python", "Java")</code></td>
+        <td><code>" Olá, Mundo Java! "</code> (substitui parte da string)</td>
+      </tr>
+      <tr>
+        <td><code>.title()</code></td>
+        <td><code>texto.title()</code></td>
+        <td><code>" Olá, Mundo Python! "</code> (primeira letra de cada palavra em maiúscula)</td>
+      </tr>
+      <tr>
+        <td><code>.count()</code></td>
+        <td><code>texto.count("o")</code></td>
+        <td>Conta quantas vezes um caractere/substring aparece</td>
+      </tr>
+      <tr>
+        <td><code>len()</code></td>
+        <td><code>len(texto)</code></td>
+        <td>Retorna o tamanho da string (incluindo espaços)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <li>4. F-Strings e Format - Formatando Strings</li>
+  <p>F-strings são a maneira mais moderna de formatar texto com variáveis:</p>
+  <pre>
+nome = "Carlos"
+idade = 30
+print(f"Meu nome é {nome} e tenho {idade} anos.")
+  </pre>
+
+  <p>Formatando números e textos:</p>
+  <pre>
+valor = 9.8765
+print(f"Valor formatado: {valor:.2f}")  # 9.88
+  </pre>
+
+  <p>Formatando como moeda (estilo brasileiro):</p>
+  <pre>
+preco = 3499.9
+print(f"R${preco:,.2f}".replace(",", "v").replace(".", ",").replace("v", "."))
+# R$3.499,90
+  </pre>
+
+  <p>Datas e horas:</p>
+  <pre>
+from datetime import datetime
+agora = datetime.now()
+print(f"Hoje é {agora:%d/%m/%Y}")
+print(f"Hora atual: {agora:%H:%M:%S}")
+  </pre>
+
+  <li>5. Alinhamento e Exibição</li>
+  <pre>
+produto = "Arroz"
+print(f"{produto:<10} - Alinhado à esquerda")
+print(f"{produto:>10} - Alinhado à direita")
+print(f"{produto:^10} - Centralizado")
+  </pre>
+
+  <li>6. Verificações com in e Comparações</li>
+  <p>Podemos verificar se uma string contém outra:</p>
+  <pre>
+frase = "Aprendendo Python"
+print("Python" in frase)      # True
+print("Java" in frase)        # False
+print("Python" not in frase)  # False
+  </pre>
+
+  <p>Verificando início e fim:</p>
+  <pre>
+print(frase.startswith("Apre"))  # True
+print(frase.endswith("Python"))  # True
+  </pre>
+
+  <p>Comparações:</p>
+  <pre>
+nome1 = "João"
+nome2 = "joão"
+print(nome1 == nome2)            # False
+print(nome1.lower() == nome2.lower())  # True
+  </pre>
+
+  <li>7. Exercícios práticos</li>
+  <p>Exemplo 1: Nome formatado e saudação</p>
+  <pre>
+nome = input("Digite seu nome: ").strip().title()
+print(f"Seja bem-vindo(a), {nome}!")
+  </pre>
+
+  <p>Exemplo 2: Validação de e-mail</p>
+  <pre>
+email = input("Digite seu e-mail: ")
+if "@" in email and "." in email:
+    print("E-mail válido")
+else:
+    print("E-mail inválido")
+  </pre>
+
+  <p>Exemplo 3: Contar vogais</p>
+  <pre>
+texto = input("Digite uma frase: ").lower()
+vogais = "aeiou"
+contador = sum(1 for letra in texto if letra in vogais)
+print(f"A frase tem {contador} vogais.")
+  </pre>
+</ul>
+
+  </main>
+
+  <footer>
+    <p><a href="index.html">⬅ Voltar para o menu</a></p>
+  </footer>
+</body>
+</html>

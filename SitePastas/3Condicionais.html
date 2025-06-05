@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Condicionais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Módulo 2 -listas e tuplas</h1>
+  </header>
+
+  <main>
+    <h2>O que aprendi</h2>
+
+✅ O que são Condicionais em Python?
+Condicionais são comandos que permitem ao programa tomar decisões com base em condições. O comando principal é o if (se), que executa um bloco de código apenas se uma condição for verdadeira.
+
+    <ul>
+      <li>1. Ordem de Execução dos Programas</li>
+     <p>Python executa os comandos linha por linha, de cima para baixo, de forma sequencial. Portanto, uma variável precisa ser declarada (ter um valor atribuído) antes de ser usada, ou o programa gerará um erro.</p>
+      <li>2. Tipos de Variáveis</li>
+      <pre>
+1. Estrutura do if – Condições no Python
+
+A estrutura básica do if é:
+
+if condição:
+    # bloco de código a ser executado se a condição for verdadeira
+
+Exemplo:
+
+idade = 18
+if idade >= 18:
+    print("Você é maior de idade.")
+
+2. Blocos e Indentação – If dentro de If (Aninhamento)
+
+Em Python, espaços (indentação) definem os blocos de código. Você pode colocar um if dentro de outro (chamado if aninhado):
+
+Exemplo:
+
+idade = 20
+tem_carteira = True
+
+if idade >= 18:
+    if tem_carteira:
+        print("Pode dirigir.")
+    else:
+        print("Precisa tirar a carteira.")
+else:
+    print("Ainda não pode dirigir.")
+
+3. Elif
+
+O elif (else if) permite testar múltiplas condições diferentes, uma após a outra.
+
+Exemplo:
+
+nota = 7
+
+if nota >= 9:
+    print("Excelente!")
+elif nota >= 7:
+    print("Bom.")
+elif nota >= 5:
+    print("Regular.")
+else:
+    print("Reprovado.")
+</pre>
+
+      <li>4. Comparadores</li>
+      <p>Comparadores são usados para fazer comparações lógicas:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Comparador</th>
+            <th>Significado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>==</code></td>
+            <td>Igual a</td>
+          </tr>
+          <tr>
+            <td><code>!=</code></td>
+            <td>Diferente de</td>
+          </tr>
+          <tr>
+            <td><code>></code></td>
+            <td>Maior que</td>
+          </tr>
+          <tr>
+            <td><code><</code></td>
+            <td>Menor que</td>
+          </tr>
+          <tr>
+            <td><code>>=</code></td>
+            <td>Maior ou igual</td>
+          </tr>
+          <tr>
+            <td><code><=</code></td>
+            <td>Menor ou igual</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre>
+Exemplo:
+
+a = 10
+b = 5
+print(a > b)  # True
+print(a == b) # False
+
+5. And e Or
+
+Você pode combinar condições com os operadores and (e) e or (ou):
+
+    and: todas as condições devem ser verdadeiras.
+
+    or: pelo menos uma condição deve ser verdadeira.
+
+Exemplo com and:
+
+idade = 20
+tem_carteira = True
+
+if idade >= 18 and tem_carteira:
+    print("Pode dirigir.")
+
+Exemplo com or:
+
+feriado = True
+domingo = False
+
+if feriado or domingo:
+    print("Hoje não tem aula.")
+
+6. Exercícios If – Parte 1
+
+Exercícios básicos de tomada de decisão, como:
+
+    Verificar se um número é positivo, negativo ou zero.
+
+    Verificar se a pessoa pode votar com base na idade.
+
+Exemplo:
+
+numero = int(input("Digite um número: "))
+
+if numero > 0:
+    print("Positivo")
+elif numero < 0:
+    print("Negativo")
+else:
+    print("Zero")
+
+7. Comparações Contraintuitivas
+
+Alguns casos parecem lógicos, mas exigem cuidado:
+
+nome = input("Digite seu nome: ")
+
+# Errado: comparação com 'is' (verifica identidade de objeto, não valor)
+# if nome is "João":   ❌
+
+# Certo:
+if nome == "João":
+    print("Olá, João!")
+
+Outro exemplo importante:
+
+valor = 0
+
+if valor:
+    print("Valor é verdadeiro")
+else:
+    print("Valor é falso")  # 0, '', None são tratados como False
+
+8. Exercícios If – Parte 2
+
+Exercícios mais desafiadores que envolvem múltiplas condições, and, or, e elif.
+
+Exemplo:
+
+idade = int(input("Digite sua idade: "))
+sexo = input("Digite seu sexo (M/F): ")
+
+if idade >= 18 and sexo == 'M':
+    print("Alistamento obrigatório.")
+elif idade >= 18 and sexo == 'F':
+    print("Alistamento opcional.")
+else:
+    print("Ainda não precisa se alistar.")
+
+9. Lista de Exercícios – Estruturas de Decisão
+
+Aqui você pode praticar tudo com desafios como:
+
+    Verificar maior de dois números
+
+    Calcular se um ano é bissexto
+
+    Classificar triângulos com base nos lados
+
+    Calcular aumento de salário com base em faixas
+
+Exemplo de exercício:
+
+salario = float(input("Digite seu salário: "))
+
+if salario <= 2000:
+    aumento = salario * 0.15
+else:
+    aumento = salario * 0.10
+
+print(f"Aumento: R${aumento:.2f}")
+print(f"Novo salário: R${salario + aumento:.2f}")
+
+</pre>
+      
+      
+  </main>
+
+  <footer>
+    <p><a href="index.html">⬅ Voltar para o menu</a></p>
+  </footer>
+</body>
+</html>

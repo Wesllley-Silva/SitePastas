@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background: #e0e0e0;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  background: white;
+  min-height: 300px;
+}
+
+/* ✅ Margem à esquerda para todos os elementos de texto principais */
+main p,
+main ul,
+main ol,
+main li,
+main h2,
+main h3,
+main h4 {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ❌ Bloco de código SEM borda, mas com visual limpo e alinhado */
+pre {
+  font-family: Consolas, monospace;
+  font-size: 1rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  margin: 1rem 0 1rem 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
+/* Tabelas simples */
+table {
+  border-collapse: collapse;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  /* Removendo ou reduzindo o width para que a tabela não ocupe 90% da largura, */
+  /* permitindo que ela seja mais compacta. Você pode usar 'width: auto;' ou remover esta linha. */
+  width: auto; /* Ajusta a largura da tabela ao conteúdo, deixando-a "menor" */
+  /* ou se preferir um tamanho fixo, pode usar: width: 300px; */
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.5rem; /* Diminuído o padding para "encolher" as células */
+  text-align: left;
+}
+
+table th {
+  background-color: #eee;
+}
+
+footer {
+  background: #ccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
